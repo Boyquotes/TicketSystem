@@ -34,7 +34,9 @@ func selectFromDB():
 	""")
 	
 	for d in data:
-		print(data.data_row)
+		print(d.data_row)
+	if not database.error_object.empty():
+		prints("Error:", database.error_object)
 	database.close()
 	
 func _exit_tree():
@@ -50,7 +52,7 @@ func _on_Sprite_pressed():
 
 
 func _on_Button_pressed():
-	LogIn()
+	selectFromDB()
 
 func LogIn():
 	var username_input = $Username_LN.text
