@@ -1,0 +1,87 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Police/Roboto/Roboto-LightItalic.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Police/Roboto/Roboto-Light.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Icon/eye-solid.svg" type="Texture" id=3]
+[ext_resource path="res://LogIn.gd" type="Script" id=4]
+[ext_resource path="res://Icon/eye-slash-solid.svg" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 182
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 28
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.133333, 0.133333, 0.133333, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.133333, 0.133333, 0.133333, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="LogIn" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 448.0
+margin_right = 1402.0
+margin_bottom = 276.0
+custom_fonts/font = SubResource( 1 )
+text = "Connexion"
+align = 1
+
+[node name="Username_LN" type="LineEdit" parent="."]
+margin_left = 768.0
+margin_top = 448.0
+margin_right = 1152.0
+margin_bottom = 512.0
+focus_mode = 1
+custom_fonts/font = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+align = 1
+placeholder_text = "Nom d'utilisateur"
+caret_blink = true
+
+[node name="Password_LN" type="LineEdit" parent="."]
+margin_left = 768.0
+margin_top = 576.0
+margin_right = 1152.0
+margin_bottom = 640.0
+focus_mode = 1
+custom_fonts/font = SubResource( 2 )
+custom_styles/normal = SubResource( 4 )
+align = 1
+secret = true
+clear_button_enabled = true
+placeholder_text = "Mot de passe"
+caret_blink = true
+
+[node name="Sprite" type="TextureButton" parent="."]
+margin_left = 1168.0
+margin_top = 584.0
+margin_right = 1222.0
+margin_bottom = 632.0
+hint_tooltip = "Afficher/cacher votre mot de passe"
+toggle_mode = true
+pressed = true
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 5 )
+expand = true
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 8.0
+margin_top = 1064.0
+margin_right = 142.0
+margin_bottom = 1078.0
+text = "maelmaternelle.com©"
+
+[connection signal="pressed" from="Sprite" to="." method="_on_Sprite_pressed"]
