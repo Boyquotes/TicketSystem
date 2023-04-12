@@ -8,16 +8,6 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "Object",
-"class": "PostgreSQLClient",
-"language": "GDScript",
-"path": "res://addons/PostgreSQLClient/PostgreSQLClient.gd"
-} ]
-_global_script_class_icons={
-"PostgreSQLClient": ""
-}
-
 [application]
 
 config/name="Ticket System"
@@ -27,6 +17,7 @@ config/icon="res://icon.png"
 [autoload]
 
 PostgreSqlClient="*res://addons/PostgreSQLClient/PostgreSQLClient.gd"
+Db="*res://db.gd"
 
 [display]
 
@@ -36,6 +27,10 @@ window/size/borderless=true
 window/dpi/allow_hidpi=true
 window/stretch/mode="2d"
 window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/godot-sqlite/plugin.cfg" )
 
 [physics]
 

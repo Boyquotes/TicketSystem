@@ -1,103 +1,187 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://SelectPlace.gd" type="Script" id=1]
 [ext_resource path="res://Siege.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Police/Roboto/Roboto-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Police/Roboto/Roboto-Regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 104
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 42
+font_data = ExtResource( 4 )
 
 [node name="SelectPlace" type="Node2D"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ],
+"_edit_vertical_guides_": [  ]
+}
 
 [node name="Siege" parent="." groups=["siege"] instance=ExtResource( 2 )]
-position = Vector2( 144, 152 )
+position = Vector2( 24, 256 )
 
 [node name="Label" type="Label" parent="Siege"]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_top = 1.0
+margin_right = 128.0
+margin_bottom = 128.0
+custom_fonts/font = SubResource( 1 )
 text = "1"
+align = 1
+valign = 1
 
 [node name="Siege2" parent="." groups=["siege"] instance=ExtResource( 2 )]
-position = Vector2( 208, 152 )
+position = Vector2( 184, 256 )
 
 [node name="Label" type="Label" parent="Siege2"]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_right = 128.0
+margin_bottom = 128.0
+custom_fonts/font = SubResource( 1 )
 text = "2"
+align = 1
+valign = 1
 
 [node name="Siege3" parent="." groups=["siege"] instance=ExtResource( 2 )]
-position = Vector2( 272, 152 )
+position = Vector2( 344, 256 )
 
 [node name="Label" type="Label" parent="Siege3"]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_right = 128.0
+margin_bottom = 128.0
+custom_fonts/font = SubResource( 1 )
 text = "3"
+align = 1
+valign = 1
 
 [node name="Siege4" parent="." groups=["siege"] instance=ExtResource( 2 )]
-position = Vector2( 336, 152 )
+position = Vector2( 496, 257 )
 
 [node name="Label" type="Label" parent="Siege4"]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_right = 128.0
+margin_bottom = 128.0
+custom_fonts/font = SubResource( 1 )
 text = "4"
+align = 1
+valign = 1
 
 [node name="Siege5" parent="." groups=["siege"] instance=ExtResource( 2 )]
-position = Vector2( 400, 152 )
+position = Vector2( 656, 257 )
 
 [node name="Label" type="Label" parent="Siege5"]
-margin_right = 40.0
-margin_bottom = 14.0
+anchor_bottom = 1.0
+margin_right = 128.0
+margin_bottom = 127.0
+custom_fonts/font = SubResource( 1 )
 text = "5"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Siege6" parent="." groups=["siege"] instance=ExtResource( 2 )]
-position = Vector2( 464, 152 )
+position = Vector2( 808, 257 )
 
 [node name="Label" type="Label" parent="Siege6"]
+anchor_right = 88.0
+anchor_bottom = 88.0
 margin_right = 40.0
-margin_bottom = 14.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 1 )
 text = "6"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Siege7" parent="." groups=["siege"] instance=ExtResource( 2 )]
-position = Vector2( 528, 152 )
+position = Vector2( 968, 256 )
 
 [node name="Label" type="Label" parent="Siege7"]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_right = 128.0
+margin_bottom = 127.0
+custom_fonts/font = SubResource( 1 )
 text = "7"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Siege8" parent="." groups=["siege"] instance=ExtResource( 2 )]
-position = Vector2( 592, 152 )
+position = Vector2( 1128, 256 )
 
 [node name="Label" type="Label" parent="Siege8"]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_right = 128.0
+margin_bottom = 128.0
+custom_fonts/font = SubResource( 1 )
 text = "8"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Siege9" parent="." groups=["siege"] instance=ExtResource( 2 )]
-position = Vector2( 656, 152 )
+position = Vector2( 1288, 256 )
 
 [node name="Label" type="Label" parent="Siege9"]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_right = 128.0
+margin_bottom = 128.0
+custom_fonts/font = SubResource( 1 )
 text = "9"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Siege10" parent="." groups=["siege"] instance=ExtResource( 2 )]
-position = Vector2( 720, 152 )
+position = Vector2( 1448, 256 )
 
 [node name="Label" type="Label" parent="Siege10"]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_right = 128.0
+margin_bottom = 127.0
+custom_fonts/font = SubResource( 1 )
 text = "10"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Siege11" parent="." groups=["siege"] instance=ExtResource( 2 )]
-position = Vector2( 784, 152 )
+position = Vector2( 1608, 256 )
 
 [node name="Label" type="Label" parent="Siege11"]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_right = 128.0
+margin_bottom = 127.0
+custom_fonts/font = SubResource( 1 )
 text = "11"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Siege12" parent="." groups=["siege"] instance=ExtResource( 2 )]
-position = Vector2( 848, 152 )
+position = Vector2( 1768, 257 )
 
 [node name="Label" type="Label" parent="Siege12"]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_right = 129.0
+margin_bottom = 128.0
+custom_fonts/font = SubResource( 1 )
 text = "12"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="."]
+margin_left = 648.0
+margin_right = 1160.0
+margin_bottom = 104.0
+custom_fonts/font = SubResource( 2 )
+text = "Choisisez votre place"
+align = 1
+valign = 1
